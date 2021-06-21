@@ -1,0 +1,62 @@
+{% if page.author_profile or layout.author_profile or page.sidebar %}
+  <div class="sidebar sticky">
+  {% if page.author_profile or layout.author_profile %}{% include author-profile.html %}{% endif %}
+  {% if page.sidebar %}
+    {% for s in page.sidebar %}
+      {% if s.image %}
+        <img src="{{ s.image | relative_url }}"
+             alt="{% if s.image_alt %}{{ s.image_alt }}{% endif %}">
+      {% endif %}
+      {% if s.title %}<h3>{{ s.title }}</h3>{% endif %}
+      {% if s.text %}{{ s.text | markdownify }}{% endif %}
+      {% if s.nav %}{% include nav_list nav=s.nav %}{% endif %}
+    {% endfor %}
+    {% if page.sidebar.nav %}
+      {% include nav_list nav=page.sidebar.nav %}
+    {% endif %}
+  {% endif %}
+
+
+    {% assign sum = site.posts | size %}
+
+    <nav class="nav__list">
+      <input id="ac-toc" name="accordion-toc" type="checkbox" />
+      <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
+      <ul class="nav__items" id="category_tag_menu">
+          <li>
+            <span class="nav__sub-title">Category Group1</span>
+                <ul>
+                    {% for category in site.categories %}
+                        {% if category[0] == "Test1" %}
+                            <li><a href="/categories/#test1" class="">Test1 ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                  {% for category in site.categories %}
+                      {% if category[0] == "Test2" %}
+                          <li><a href="/categories/#test2" class="">Test2 ({{category[1].size}})</a></li>
+                      {% endif %}
+                  {% endfor %}
+                </ul>
+            <span class="nav__sub-title">Category Group2</span>
+                <ul>
+                    {% for category in site.categories %}
+                        {% if category[0] == "algorithm" %}
+                            <li><a href="/categories/#algorithm" class=""> algorithm ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+                <ul>
+                    {% for category in site.categories %}
+                        {% if category[0] == "Programmers" %}
+                            <li><a href="/categories/#programmers" class=""> programmers ({{category[1].size}})</a></li>
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+          </li>
+      </ul>
+    </nav>
+
+  </div>
+{% endif %}
