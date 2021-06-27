@@ -1,5 +1,5 @@
 ---
-title:  "백엔드 개발자(Backend Developer) 되기 위해 필요한 지식들 - 초급(Basic)"
+title:  "백엔드 개발자(Backend Developer)가 되기 위해 필요한 지식들 - 초급(Basic)"
 toc: true
 toc_sticky: true
 date: 2021-06-26
