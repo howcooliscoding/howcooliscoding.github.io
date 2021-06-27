@@ -20,12 +20,12 @@ title                    : "How Cool Is Coding"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "How Cool Is Coding"
-description              : "개발을 통해 세상을 조금더 편안하게 만들수 있다면"
+description              : "개발을 통해 세상을 조금 더 편안하게"
 url                      : "https://www.howcooliscoding.com"
 baseurl                  : # the subpath of your site, e.g. "/blog"
 repository               : # GitHub username/repo-name e.g. "mmistakes/minimal-mistakes"
 teaser                   : # path of fallback teaser image, e.g. "/assets/images/500x300.png"
-logo                     : "/assets/images/howcooliscoding_logo.png"
+logo                     : "/assets/images/logo_v1.png"
 masthead_title           : # overrides the website title displayed in the masthead, use " " for no title
 # breadcrumbs            : false # true, false (default)
 words_per_minute         : 200
@@ -257,7 +257,6 @@ jekyll-archives:
   permalinks:
     category: /categories/:name/
     tag: /tags/:name/
-
 
 # HTML Compression
 # - https://jch.penibelst.de/
