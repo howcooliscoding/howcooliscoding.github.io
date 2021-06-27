@@ -22,40 +22,6 @@
     <nav class="nav__list">
       <input id="ac-toc" name="accordion-toc" type="checkbox" />
       <label for="ac-toc">{{ site.data.ui-text[site.locale].menu_label }}</label>
-      <ul class="nav__items" id="category_tag_menu">
-          <li>
-            <span class="nav__sub-title">Category Group1</span>
-                <ul>
-                    {% for category in site.categories %}
-                        {% if category[0] == "Test1" %}
-                            <li><a href="/categories/#test1" class="">Test1 ({{category[1].size}})</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul>
-                  {% for category in site.categories %}
-                      {% if category[0] == "Test2" %}
-                          <li><a href="/categories/#test2" class="">Test2 ({{category[1].size}})</a></li>
-                      {% endif %}
-                  {% endfor %}
-                </ul>
-            <span class="nav__sub-title">Category Group2</span>
-                <ul>
-                    {% for category in site.categories %}
-                        {% if category[0] == "algorithm" %}
-                            <li><a href="/categories/#algorithm" class=""> algorithm ({{category[1].size}})</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-                <ul>
-                    {% for category in site.categories %}
-                        {% if category[0] == "Programmers" %}
-                            <li><a href="/categories/#programmers" class=""> programmers ({{category[1].size}})</a></li>
-                        {% endif %}
-                    {% endfor %}
-                </ul>
-          </li>
-      </ul>
     </nav>
 
   </div>
