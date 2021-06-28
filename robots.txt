@@ -1,12 +1,6 @@
 User-agent: *
 Allow: /
 
-# Temp Disallow 
-Disallow: /tags/*
-Disallow: /categories/*
-
-
-
 # Static File
 Disallow: /assets
 
